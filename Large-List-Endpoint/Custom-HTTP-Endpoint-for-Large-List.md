@@ -11,7 +11,7 @@ One of my biggest pet peeves is that the SharePoint List connectors have built i
 This flow that I designed uses a HTTP Request trigger, but you can use whatever trigger you want. I chose that trigger so I can access this flow from other Power Automate flows as well as other external programs. I used a sample payload to generate the schema for this endpoint. It takes in a Site ID of the SharePoint site containing the list and the ID of the list itself. This information can be obtained from the relevant Graph API endpoints and won't change during the lifetime of the site or list.
 
 
-![HTTP Trigger](images\01.png)
+![HTTP Trigger](images/01.png)
 
 ## Getting Graph OAuth Token
 
@@ -43,7 +43,7 @@ body('Get_Auth_Token')?['access_token']
 
 I include the keyword "Bearer" in the variable so I don't have to remember to add it to each call. Also, makes the blocks look a bit cleaner with only a variable name in the field.
 
-![Get Authentication Token](images\02.png)
+![Get Authentication Token](images/02.png)
 
 ## Initializing Loop Variables
 
@@ -55,7 +55,7 @@ First, you'll need the Array variable that will hold the results of all your req
 
 We don't know how many times the loop will need to run, but we do know that the last response will not include a nexLink URL. Power Automate and Strings can be a bit strange so I tested out some different options for the right hand side of the loop control equation. Surprisingly, leaving it completely blank is the easiest and most reliable solution.
 
-![Loop Control Statement](images\04.png)
+![Loop Control Statement](images/04.png)
 
 ## Now for the Loop!
 
@@ -85,7 +85,7 @@ Next, we use a Parse Json block to read the response. This step is not strictly 
 }
 ```
 
-![Parse response of list items](images\06.png)
+![Parse response of list items](images/06.png)
 
 (Usually, you will only need the results of the call so you would use Value instead of the Body. This is one of the few exceptions since we need that Next Link value.)
 
@@ -300,7 +300,7 @@ This is what the unedited generated schema would look like:
 
 After that, the loop is almost completed, with only three short actions to complete.
 
-![Complete Loop by Saving List Items](images\07.png)
+![Complete Loop by Saving List Items](images/07.png)
 
 The first one is a Compose block with the following expression in it:
 
@@ -314,7 +314,7 @@ Last but not least, we extract the Next Link URL, if one came with the response,
 
 Once the loop has completed, the full list of items is returned as a response to the original request that triggered this flow.
 
-![Return all List Items](images\08.png)
+![Return all List Items](images/08.png)
 
 ### Limitation
 
@@ -326,4 +326,4 @@ Power Automate is a great tool for all sorts of automations, but sometimes we ne
 
 Here is the whole flow from start to finish. I hope you this demo will help you with your automation projects and inspire you to discover more interesting ways Power Automate can be used.
 
-![Complete Flow](images\09.png)
+![Complete Flow](images/09.png)
