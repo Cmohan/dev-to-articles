@@ -1,3 +1,5 @@
+# Using Power Automate to copy a Template Folder
+
 When I start a project, there are usually three files that I know I'm going to need. Originally, I had template files that I would copy manually from a default folder into a new folder specifically for the project. Not a complicated process, but I only have three files. Some teams can have many files they need to copy for each new client or project! If you store your project files in SharePoint, you can take advantage of this Power Automate Instant Flow to automate your project kick-off.
 
 The first step in creating this automation is to create a template folder in SharePoint containing all the default files you need to kick-off your project. You can store it in the same place as you want to store the project files or you can store it somewhere else. Here's mine as an example:

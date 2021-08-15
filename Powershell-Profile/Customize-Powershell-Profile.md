@@ -7,7 +7,7 @@ If you've never worked with the different Powershell profiles, [this article](ht
 
 ### Profile Template
 
-[Click here](/exampleProfile.ps1) to view the whole profile template file.
+[Click here](exampleProfile.ps1) to view the whole profile template file.
 
 ## Profile Sections
 
