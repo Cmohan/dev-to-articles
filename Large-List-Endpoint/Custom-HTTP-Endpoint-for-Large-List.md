@@ -1,4 +1,4 @@
-# Get all items from a large SharePoint List (Custom HTTP Endpoint)
+# Get all items from a large SharePoint List using a Custom Power Automate Http Endpoint
 
 ---
 
