@@ -296,6 +296,8 @@ This is what the unedited generated schema would look like:
 }
 ```
 
+### Saving the Results
+
 After that, the loop is almost completed, with only three short actions to complete.
 
 ![Complete Loop by Saving List Items](images\07.png)
